@@ -1,0 +1,37 @@
+tags: $:/tags/ViewTemplate
+title: $:/plugins/michaelballantyne/bottom-context/ViewTemplate/tagged
+
+<$reveal tag="div" class="tc-tiddler-body" type="nomatch" state=<<folded-state>> text="hide" retain="yes" animate="yes">
+
+
+<$set name="hastagged" filter="[all[current]tagging[]]" value="yes" emptyValue="no">
+
+
+<$set name="hasreferences" filter="[all[current]backlinks[]sort[title]]" value="yes" emptyValue="no">
+
+
+<$reveal default=<<hasreferences>> style="overflow: hidden; vertical-align: top; display: inline-block; margin-right:2%; width:48%" type="match" text="yes">
+
+
+<$macrocall $name="tabs" state=<<qualify "$:/state/referencetabs">> tabsList="$:/core/ui/TiddlerInfo/References" default="$:/core/ui/TiddlerInfo/References"/>
+
+
+</$reveal>
+
+
+<$reveal default=<<hastagged>> style="overflow: hidden; vertical-align: top; display: inline-block; width:48%" type="match" text="yes">
+
+
+<$macrocall $name="tabs" state=<<qualify "$:/state/taggedtabs">> tabsList="$:/core/ui/TiddlerInfo/Tagging" default="$:/core/ui/TiddlerInfo/Tagging"/>
+
+
+</$reveal>
+
+
+</$set>
+
+
+</$set>
+
+
+</$reveal>

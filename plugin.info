@@ -1,0 +1,8 @@
+{
+	"title": "$:/plugins/michaelballantyne/bottom-context",
+	"description": "Adds References and Tagged sections to the bottom of tiddlers. These are only shown when there is content for them to display.",
+	"version": "1",
+	"core-version": ">=5.0.15",
+	"plugin-type": "plugin"
+}
+

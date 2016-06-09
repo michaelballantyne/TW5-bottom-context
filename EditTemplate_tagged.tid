@@ -1,0 +1,6 @@
+tags: $:/tags/EditTemplate
+title: $:/plugins/michaelballantyne/bottom-context/EditTemplate/context
+
+<$set name="currentTiddler" value={{!!draft.title}}>
+<$transclude tiddler="$:/plugins/michaelballantyne/bottom-context/ViewTemplate/context"/>
+</$set>
